@@ -13,6 +13,8 @@
 		FAC275A82286FE8C00DC1BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A72286FE8C00DC1BFB /* Assets.xcassets */; };
 		FAC275AB2286FE8C00DC1BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A92286FE8C00DC1BFB /* LaunchScreen.storyboard */; };
 		FAC275B62286FE8C00DC1BFB /* CountrySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275B52286FE8C00DC1BFB /* CountrySearchTests.swift */; };
+		FAC275C52287064500DC1BFB /* CountryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275C32287064500DC1BFB /* CountryViewCell.swift */; };
+		FAC275C62287064500DC1BFB /* CountryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC275C42287064500DC1BFB /* CountryViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		FAC275B12286FE8C00DC1BFB /* CountrySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountrySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC275B52286FE8C00DC1BFB /* CountrySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchTests.swift; sourceTree = "<group>"; };
 		FAC275B72286FE8C00DC1BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC275C32287064500DC1BFB /* CountryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewCell.swift; sourceTree = "<group>"; };
+		FAC275C42287064500DC1BFB /* CountryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */,
+				FAC275C32287064500DC1BFB /* CountryViewCell.swift */,
+				FAC275C42287064500DC1BFB /* CountryViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				FAC275AB2286FE8C00DC1BFB /* LaunchScreen.storyboard in Resources */,
 				FAC275A82286FE8C00DC1BFB /* Assets.xcassets in Resources */,
 				FAC275A62286FE8B00DC1BFB /* Main.storyboard in Resources */,
+				FAC275C62287064500DC1BFB /* CountryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +230,7 @@
 			files = (
 				FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */,
 				FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */,
+				FAC275C52287064500DC1BFB /* CountryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

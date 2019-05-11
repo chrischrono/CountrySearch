@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,13 +13,91 @@
         <!--Country Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CountrySearchViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CountrySearchViewController" customModule="CountrySearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-r4-Eye">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Op-am-WU2">
+                                <rect key="frame" x="0.0" y="100" width="414" height="712"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qvH-yX-Pg4">
+                                <rect key="frame" x="188.5" y="437.5" width="37" height="37"/>
+                                <color key="color" red="0.36742228269577026" green="0.80455696582794189" blue="0.7215607762336731" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jc-rf-Jxg">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-ii-qUE">
+                                        <rect key="frame" x="20" y="16" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ciO-ii-qUE" firstAttribute="centerX" secondItem="1Jc-rf-Jxg" secondAttribute="centerX" id="0Vr-GM-odq"/>
+                                    <constraint firstItem="ciO-ii-qUE" firstAttribute="width" secondItem="1Jc-rf-Jxg" secondAttribute="width" constant="-40" id="8MV-I5-fWg"/>
+                                    <constraint firstAttribute="height" constant="50" id="NTZ-2h-Hdc"/>
+                                    <constraint firstItem="ciO-ii-qUE" firstAttribute="centerY" secondItem="1Jc-rf-Jxg" secondAttribute="centerY" id="yeC-AY-ZHS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-GH-wgL">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WI-47-Vpe">
+                                        <rect key="frame" x="20" y="5" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.040258601307868958" green="0.80056768655776978" blue="0.72156244516372681" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="udq-gE-CMP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Current Country: "/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7WI-47-Vpe" firstAttribute="centerY" secondItem="nBN-GH-wgL" secondAttribute="centerY" id="4zH-Zt-9i7"/>
+                                    <constraint firstAttribute="height" constant="50" id="SGc-GB-LvT"/>
+                                    <constraint firstItem="7WI-47-Vpe" firstAttribute="centerX" secondItem="nBN-GH-wgL" secondAttribute="centerX" id="Xe1-gJ-ci0"/>
+                                    <constraint firstItem="7WI-47-Vpe" firstAttribute="width" secondItem="nBN-GH-wgL" secondAttribute="width" constant="-40" id="dmB-Ae-P4D"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Op-am-WU2" firstAttribute="bottom" secondItem="nBN-GH-wgL" secondAttribute="top" id="ESE-om-h94"/>
+                            <constraint firstItem="qvH-yX-Pg4" firstAttribute="centerY" secondItem="9Op-am-WU2" secondAttribute="centerY" id="WDW-cC-rvW"/>
+                            <constraint firstItem="1Jc-rf-Jxg" firstAttribute="top" secondItem="nBN-GH-wgL" secondAttribute="top" id="XJP-EP-Mll"/>
+                            <constraint firstItem="JrN-r4-Eye" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zqg-C1-TGO"/>
+                            <constraint firstItem="qvH-yX-Pg4" firstAttribute="centerX" secondItem="9Op-am-WU2" secondAttribute="centerX" id="dlP-6q-anK"/>
+                            <constraint firstItem="nBN-GH-wgL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ezb-CR-BqI"/>
+                            <constraint firstItem="1Jc-rf-Jxg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="fs0-Gt-g8H"/>
+                            <constraint firstItem="9Op-am-WU2" firstAttribute="top" secondItem="JrN-r4-Eye" secondAttribute="bottom" id="qaI-y4-UvS"/>
+                            <constraint firstItem="nBN-GH-wgL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rMe-1R-eBy"/>
+                            <constraint firstItem="1Jc-rf-Jxg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sZz-by-pLc"/>
+                            <constraint firstItem="9Op-am-WU2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjb-Ye-Eko"/>
+                            <constraint firstItem="nBN-GH-wgL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uAM-9I-opP"/>
+                            <constraint firstItem="JrN-r4-Eye" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vrP-5c-DQo"/>
+                            <constraint firstItem="9Op-am-WU2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xJb-uz-R8u"/>
+                            <constraint firstItem="JrN-r4-Eye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zgw-Nc-pIs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countryTableView" destination="9Op-am-WU2" id="bV2-WV-OZ3"/>
+                        <outlet property="currentCountryButton" destination="7WI-47-Vpe" id="dde-Hl-W3a"/>
+                        <outlet property="loadingView" destination="qvH-yX-Pg4" id="6Xw-Z6-RhL"/>
+                        <outlet property="searchBar" destination="JrN-r4-Eye" id="T6R-m5-Yjv"/>
+                        <outlet property="statusLabel" destination="ciO-ii-qUE" id="E0T-zG-qOf"/>
+                        <outlet property="statusView" destination="1Jc-rf-Jxg" id="l9t-ND-L46"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,13 @@
 import UIKit
 
 class CountrySearchViewController: UIViewController {
+    
+    @IBOutlet private var searchBar: UISearchBar!
+    @IBOutlet private var countryTableView: UITableView!
+    @IBOutlet private var statusView: UIView!
+    @IBOutlet private var statusLabel: UILabel!
+    @IBOutlet private var currentCountryButton: UIButton!
+    @IBOutlet private var loadingView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
