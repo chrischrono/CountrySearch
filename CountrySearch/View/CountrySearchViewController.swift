@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CountrySearchViewController.swift
 //  CountrySearch
 //
 //  Created by Christian on 11/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CountrySearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

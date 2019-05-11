@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */; };
-		FAC275A32286FE8B00DC1BFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A22286FE8B00DC1BFB /* ViewController.swift */; };
+		FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */; };
 		FAC275A62286FE8B00DC1BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A42286FE8B00DC1BFB /* Main.storyboard */; };
 		FAC275A82286FE8C00DC1BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A72286FE8C00DC1BFB /* Assets.xcassets */; };
 		FAC275AB2286FE8C00DC1BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A92286FE8C00DC1BFB /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		FAC2759D2286FE8B00DC1BFB /* CountrySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountrySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAC275A22286FE8B00DC1BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchViewController.swift; sourceTree = "<group>"; };
 		FAC275A52286FE8B00DC1BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC275A72286FE8C00DC1BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC275AA2286FE8C00DC1BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,8 +77,10 @@
 		FAC2759F2286FE8B00DC1BFB /* CountrySearch */ = {
 			isa = PBXGroup;
 			children = (
+				FAC275C22286FEC700DC1BFB /* Model */,
+				FAC275C12286FEC400DC1BFB /* View */,
+				FAC275C02286FEC000DC1BFB /* ViewModel */,
 				FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */,
-				FAC275A22286FE8B00DC1BFB /* ViewController.swift */,
 				FAC275A42286FE8B00DC1BFB /* Main.storyboard */,
 				FAC275A72286FE8C00DC1BFB /* Assets.xcassets */,
 				FAC275A92286FE8C00DC1BFB /* LaunchScreen.storyboard */,
@@ -94,6 +96,28 @@
 				FAC275B72286FE8C00DC1BFB /* Info.plist */,
 			);
 			path = CountrySearchTests;
+			sourceTree = "<group>";
+		};
+		FAC275C02286FEC000DC1BFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAC275C12286FEC400DC1BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAC275C22286FEC700DC1BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC275A32286FE8B00DC1BFB /* ViewController.swift in Sources */,
+				FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */,
 				FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
