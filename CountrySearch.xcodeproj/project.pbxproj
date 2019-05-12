@@ -15,6 +15,20 @@
 		FAC275B62286FE8C00DC1BFB /* CountrySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275B52286FE8C00DC1BFB /* CountrySearchTests.swift */; };
 		FAC275C52287064500DC1BFB /* CountryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275C32287064500DC1BFB /* CountryViewCell.swift */; };
 		FAC275C62287064500DC1BFB /* CountryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC275C42287064500DC1BFB /* CountryViewCell.xib */; };
+		FAC275CB22870CBE00DC1BFB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275C722870CBE00DC1BFB /* Language.swift */; };
+		FAC275CC22870CBE00DC1BFB /* RegionalBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275C822870CBE00DC1BFB /* RegionalBloc.swift */; };
+		FAC275CD22870CBE00DC1BFB /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275C922870CBE00DC1BFB /* Currency.swift */; };
+		FAC275CE22870CBE00DC1BFB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275CA22870CBE00DC1BFB /* Country.swift */; };
+		FAC275DF22870D7400DC1BFB /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275D222870D7400DC1BFB /* ParameterEncoding.swift */; };
+		FAC275E022870D7400DC1BFB /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275D322870D7400DC1BFB /* URLParameterEncoding.swift */; };
+		FAC275E122870D7400DC1BFB /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275D422870D7400DC1BFB /* JSONParameterEncoder.swift */; };
+		FAC275E222870D7400DC1BFB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275D622870D7400DC1BFB /* NetworkManager.swift */; };
+		FAC275E322870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275D822870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift */; };
+		FAC275E422870D7400DC1BFB /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DA22870D7400DC1BFB /* HTTPTask.swift */; };
+		FAC275E522870D7400DC1BFB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DB22870D7400DC1BFB /* HTTPMethod.swift */; };
+		FAC275E622870D7400DC1BFB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DC22870D7400DC1BFB /* Router.swift */; };
+		FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */; };
+		FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DE22870D7400DC1BFB /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +54,20 @@
 		FAC275B72286FE8C00DC1BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC275C32287064500DC1BFB /* CountryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewCell.swift; sourceTree = "<group>"; };
 		FAC275C42287064500DC1BFB /* CountryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryViewCell.xib; sourceTree = "<group>"; };
+		FAC275C722870CBE00DC1BFB /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		FAC275C822870CBE00DC1BFB /* RegionalBloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionalBloc.swift; sourceTree = "<group>"; };
+		FAC275C922870CBE00DC1BFB /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FAC275CA22870CBE00DC1BFB /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FAC275D222870D7400DC1BFB /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		FAC275D322870D7400DC1BFB /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		FAC275D422870D7400DC1BFB /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FAC275D622870D7400DC1BFB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FAC275D822870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTCountriesAPIEndPoint.swift; sourceTree = "<group>"; };
+		FAC275DA22870D7400DC1BFB /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FAC275DB22870D7400DC1BFB /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FAC275DC22870D7400DC1BFB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		FAC275DE22870D7400DC1BFB /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +109,7 @@
 		FAC2759F2286FE8B00DC1BFB /* CountrySearch */ = {
 			isa = PBXGroup;
 			children = (
+				FAC275CF22870D4600DC1BFB /* Service */,
 				FAC275C22286FEC700DC1BFB /* Model */,
 				FAC275C12286FEC400DC1BFB /* View */,
 				FAC275C02286FEC000DC1BFB /* ViewModel */,
@@ -122,8 +151,69 @@
 		FAC275C22286FEC700DC1BFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAC275CA22870CBE00DC1BFB /* Country.swift */,
+				FAC275C922870CBE00DC1BFB /* Currency.swift */,
+				FAC275C722870CBE00DC1BFB /* Language.swift */,
+				FAC275C822870CBE00DC1BFB /* RegionalBloc.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAC275CF22870D4600DC1BFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275D022870D7400DC1BFB /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FAC275D022870D7400DC1BFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275D122870D7400DC1BFB /* Encoding */,
+				FAC275D522870D7400DC1BFB /* Manager */,
+				FAC275D722870D7400DC1BFB /* EndPoint */,
+				FAC275D922870D7400DC1BFB /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAC275D122870D7400DC1BFB /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275D222870D7400DC1BFB /* ParameterEncoding.swift */,
+				FAC275D322870D7400DC1BFB /* URLParameterEncoding.swift */,
+				FAC275D422870D7400DC1BFB /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		FAC275D522870D7400DC1BFB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275D622870D7400DC1BFB /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FAC275D722870D7400DC1BFB /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275D822870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FAC275D922870D7400DC1BFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAC275DA22870D7400DC1BFB /* HTTPTask.swift */,
+				FAC275DB22870D7400DC1BFB /* HTTPMethod.swift */,
+				FAC275DC22870D7400DC1BFB /* Router.swift */,
+				FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */,
+				FAC275DE22870D7400DC1BFB /* EndPointType.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +318,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC275E122870D7400DC1BFB /* JSONParameterEncoder.swift in Sources */,
+				FAC275CE22870CBE00DC1BFB /* Country.swift in Sources */,
+				FAC275E522870D7400DC1BFB /* HTTPMethod.swift in Sources */,
+				FAC275CD22870CBE00DC1BFB /* Currency.swift in Sources */,
+				FAC275DF22870D7400DC1BFB /* ParameterEncoding.swift in Sources */,
+				FAC275E222870D7400DC1BFB /* NetworkManager.swift in Sources */,
+				FAC275E422870D7400DC1BFB /* HTTPTask.swift in Sources */,
+				FAC275E622870D7400DC1BFB /* Router.swift in Sources */,
+				FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */,
 				FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */,
+				FAC275E322870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift in Sources */,
+				FAC275CB22870CBE00DC1BFB /* Language.swift in Sources */,
 				FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */,
+				FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */,
+				FAC275CC22870CBE00DC1BFB /* RegionalBloc.swift in Sources */,
+				FAC275E022870D7400DC1BFB /* URLParameterEncoding.swift in Sources */,
 				FAC275C52287064500DC1BFB /* CountryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
