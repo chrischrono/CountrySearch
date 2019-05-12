@@ -29,6 +29,9 @@
 		FAC275E622870D7400DC1BFB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DC22870D7400DC1BFB /* Router.swift */; };
 		FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */; };
 		FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DE22870D7400DC1BFB /* EndPointType.swift */; };
+		FAE7286E22885D0500465E70 /* CountrySearchVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */; };
+		FAE728702288684D00465E70 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */; };
+		FAE7287322886E9500465E70 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7287222886E9500465E70 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		FAC275DC22870D7400DC1BFB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		FAC275DE22870D7400DC1BFB /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchVIewModel.swift; sourceTree = "<group>"; };
+		FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
+		FAE7287222886E9500465E70 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		FAC2759F2286FE8B00DC1BFB /* CountrySearch */ = {
 			isa = PBXGroup;
 			children = (
+				FAE7287122886E3C00465E70 /* Helper */,
 				FAC275CF22870D4600DC1BFB /* Service */,
 				FAC275C22286FEC700DC1BFB /* Model */,
 				FAC275C12286FEC400DC1BFB /* View */,
@@ -134,6 +141,8 @@
 		FAC275C02286FEC000DC1BFB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */,
+				FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,6 +223,14 @@
 				FAC275DE22870D7400DC1BFB /* EndPointType.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FAE7287122886E3C00465E70 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7287222886E9500465E70 /* Dynamic.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,13 +336,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC275E122870D7400DC1BFB /* JSONParameterEncoder.swift in Sources */,
+				FAE7287322886E9500465E70 /* Dynamic.swift in Sources */,
 				FAC275CE22870CBE00DC1BFB /* Country.swift in Sources */,
 				FAC275E522870D7400DC1BFB /* HTTPMethod.swift in Sources */,
 				FAC275CD22870CBE00DC1BFB /* Currency.swift in Sources */,
 				FAC275DF22870D7400DC1BFB /* ParameterEncoding.swift in Sources */,
+				FAE7286E22885D0500465E70 /* CountrySearchVIewModel.swift in Sources */,
 				FAC275E222870D7400DC1BFB /* NetworkManager.swift in Sources */,
 				FAC275E422870D7400DC1BFB /* HTTPTask.swift in Sources */,
 				FAC275E622870D7400DC1BFB /* Router.swift in Sources */,
+				FAE728702288684D00465E70 /* CountryCellViewModel.swift in Sources */,
 				FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */,
 				FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */,
 				FAC275E322870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift in Sources */,
