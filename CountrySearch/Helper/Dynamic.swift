@@ -3,10 +3,12 @@
 //
 //
 // source: https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm
+import Foundation
 
 class Dynamic<T> {
     typealias Listener = (T) -> ()
     var listener: Listener?
+    var mainAsyncListener: Listener?
     
     func bind(_ listener: Listener?) {
         self.listener = listener
@@ -20,6 +22,9 @@ class Dynamic<T> {
     var value: T {
         didSet {
             listener?(value)
+            DispatchQueue.main.async {
+                self.mainAsyncListener?(self.value)
+            }
         }
     }
     

@@ -17,6 +17,7 @@ class CountrySearchViewModel {
             reloadCountryListViewClosure?()
         }
     }
+    let currentCountry: Dynamic<String?> = Dynamic(nil)
     
     var keyword: String? = nil {
         didSet {
@@ -67,7 +68,7 @@ extension CountrySearchViewModel {
         filterCountries()
     }
     private func filterCountries() {
-        if let keyword = keyword?.lowercased() {
+        if let keyword = keyword?.lowercased(), keyword.count > 0 {
             filteredCountryCellViewModels = countryCellViewModels.filter({ return $0.name.lowercased().range(of: keyword) != nil ||
                 $0.capital.lowercased().range(of: keyword) != nil ||
                 $0.languages.lowercased().range(of: keyword) != nil
@@ -79,5 +80,16 @@ extension CountrySearchViewModel {
         if filteredCountryCellViewModels.count == 0 {
             status.value = "country_search_no_result"
         }
+    }
+}
+
+//MARK:- listView related
+extension CountrySearchViewModel {
+    func getFilteredCountryCount() -> Int {
+        return filteredCountryCellViewModels.count
+    }
+    
+    func getFilteredCountryCellViewModel(at index: Int) -> CountryCellViewModel {
+        return filteredCountryCellViewModels[index]
     }
 }

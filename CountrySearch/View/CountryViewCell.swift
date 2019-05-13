@@ -9,6 +9,11 @@
 import UIKit
 
 class CountryViewCell: UITableViewCell {
+    @IBOutlet private var flagImageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var populationLabel: UILabel!
+    @IBOutlet private var areaLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +26,14 @@ class CountryViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(model: CountryCellViewModel) {
+        //set flag
+        nameLabel.text = model.name
+        populationLabel.text = "\(model.population)👤"
+        if let area = model.area {
+            areaLabel.text = "\(area)"
+        } else {
+            areaLabel.text = nil
+        }
+    }
 }
