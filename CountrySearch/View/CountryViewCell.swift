@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CountryViewCell: UITableViewCell {
     @IBOutlet private var flagImageView: UIImageView!
@@ -14,6 +15,7 @@ class CountryViewCell: UITableViewCell {
     @IBOutlet private var populationLabel: UILabel!
     @IBOutlet private var areaLabel: UILabel!
     
+    private static let flagPlaceholder = UIImage(named: "FlagPlaceholder")
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +29,7 @@ class CountryViewCell: UITableViewCell {
     }
     
     func configureCell(model: CountryCellViewModel) {
-        //set flag
+        flagImageView.kf.setImage(with: URL(string: model.flag), placeholder: CountryViewCell.flagPlaceholder, options: nil, progressBlock: nil, completionHandler: nil)
         nameLabel.text = model.name
         populationLabel.text = "👤: \(model.population) - \(floor(model.distance))"
         if let area = model.area {

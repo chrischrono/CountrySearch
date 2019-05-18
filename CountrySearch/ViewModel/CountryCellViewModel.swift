@@ -24,7 +24,7 @@ class CountryCellViewModel {
         languages = country.languages.map({ (language) -> String in
             return language.name
         }).joined(separator: ",")
-        flag = country.alpha2Code
+        flag = "http://flagpedia.net/data/flags/normal/\(country.alpha2Code.lowercased()).png"
         population = country.population
         area = country.area
     }

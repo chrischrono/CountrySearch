@@ -10,14 +10,14 @@ import UIKit
 
 class CountrySearchViewController: UIViewController, UISearchBarDelegate {
     
-    @IBOutlet private var searchBar: UISearchBar!
-    @IBOutlet private var countryTableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var countryTableView: UITableView!
     private let refreshControl = UIRefreshControl()
-    @IBOutlet private var statusView: UIView!
-    @IBOutlet private var statusViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet private var statusLabel: UILabel!
-    @IBOutlet private var currentCountryButton: UIButton!
-    @IBOutlet private var loadingView: UIActivityIndicatorView!
+    @IBOutlet private weak var statusView: UIView!
+    @IBOutlet private weak var statusViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var currentCountryButton: UIButton!
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     
     private(set) var countrySearchViewModel = CountrySearchViewModel()
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E0E8C37FC79923B335AEEBA /* Pods_CountrySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978643109B99C4C04E9385CD /* Pods_CountrySearch.framework */; };
 		D37ED2F8633428A5A83418D1 /* Pods_CountrySearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C717A4C78FC39A93198F8765 /* Pods_CountrySearchTests.framework */; };
+		FA21FE072290C4C00004A64B /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FE062290C4C00004A64B /* CountryDetailViewController.swift */; };
+		FA21FE092290D1550004A64B /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FE082290D1550004A64B /* CountryDetailViewModel.swift */; };
 		FA5AEF2F2290132C0094D869 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AEF2E2290132C0094D869 /* LocationManager.swift */; };
 		FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */; };
 		FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */; };
@@ -54,6 +56,8 @@
 		BB10A2E61B91511C70CF6D87 /* Pods-CountrySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountrySearch.debug.xcconfig"; path = "Target Support Files/Pods-CountrySearch/Pods-CountrySearch.debug.xcconfig"; sourceTree = "<group>"; };
 		C717A4C78FC39A93198F8765 /* Pods_CountrySearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountrySearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FA930DB3F0C09D948814E5 /* Pods-CountrySearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountrySearchTests.debug.xcconfig"; path = "Target Support Files/Pods-CountrySearchTests/Pods-CountrySearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA21FE062290C4C00004A64B /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		FA21FE082290D1550004A64B /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		FA5AEF2E2290132C0094D869 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FAC2759D2286FE8B00DC1BFB /* CountrySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountrySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +118,6 @@
 				C7FA930DB3F0C09D948814E5 /* Pods-CountrySearchTests.debug.xcconfig */,
 				4E674EE2BC2CE9099A98A798 /* Pods-CountrySearchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -178,6 +181,7 @@
 			children = (
 				FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */,
 				FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */,
+				FA21FE082290D1550004A64B /* CountryDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +192,7 @@
 				FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */,
 				FAC275C32287064500DC1BFB /* CountryViewCell.swift */,
 				FAC275C42287064500DC1BFB /* CountryViewCell.xib */,
+				FA21FE062290C4C00004A64B /* CountryDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				FAC275E522870D7400DC1BFB /* HTTPMethod.swift in Sources */,
 				FAC275CD22870CBE00DC1BFB /* Currency.swift in Sources */,
 				FAC275DF22870D7400DC1BFB /* ParameterEncoding.swift in Sources */,
+				FA21FE092290D1550004A64B /* CountryDetailViewModel.swift in Sources */,
 				FAE7286E22885D0500465E70 /* CountrySearchVIewModel.swift in Sources */,
 				FAC275E222870D7400DC1BFB /* NetworkManager.swift in Sources */,
 				FAC275E422870D7400DC1BFB /* HTTPTask.swift in Sources */,
@@ -457,6 +463,7 @@
 				FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */,
 				FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */,
 				FAC275E322870D7400DC1BFB /* RESTCountriesAPIEndPoint.swift in Sources */,
+				FA21FE072290C4C00004A64B /* CountryDetailViewController.swift in Sources */,
 				FAC275CB22870CBE00DC1BFB /* Language.swift in Sources */,
 				FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */,
 				FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */,
