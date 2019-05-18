@@ -17,9 +17,9 @@ extension RESTCountriesAPI: EndPointType {
     var environmentBaseURL : String {
         switch RESTCountriesAPINetworkManager.environment {
         case .production:
-            return "https://api.themoviedb.org/3/"
+            return "https://restcountries.eu/"
         default:
-            return "https://api.themoviedb.org/3/"
+            return "https://restcountries.eu/"
         }
     }
     

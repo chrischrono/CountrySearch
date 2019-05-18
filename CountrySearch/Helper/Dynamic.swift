@@ -22,8 +22,11 @@ class Dynamic<T> {
     var value: T {
         didSet {
             listener?(value)
+            guard let mainAsyncListener = mainAsyncListener else {
+                return
+            }
             DispatchQueue.main.async {
-                self.mainAsyncListener?(self.value)
+                mainAsyncListener(self.value)
             }
         }
     }

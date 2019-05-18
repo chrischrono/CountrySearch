@@ -29,7 +29,7 @@ class CountryViewCell: UITableViewCell {
     func configureCell(model: CountryCellViewModel) {
         //set flag
         nameLabel.text = model.name
-        populationLabel.text = "\(model.population)👤"
+        populationLabel.text = "👤: \(model.population) - \(floor(model.distance))"
         if let area = model.area {
             areaLabel.text = "\(area)"
         } else {

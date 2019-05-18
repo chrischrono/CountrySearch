@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import CoreLocation
 
 
 class CountrySearchViewModel {
+    private var currLocation: CLLocation?
+    private var currCountryCode: String?
+    private var currCountry: Country? {
+        didSet{
+            currentCountry.value = currCountry?.name
+        }
+    }
+    
     private var countries = [Country]()
     private(set) var countryCellViewModels = [CountryCellViewModel]()
     private(set) var filteredCountryCellViewModels = [CountryCellViewModel]() {
@@ -28,15 +37,54 @@ class CountrySearchViewModel {
     let status: Dynamic<String?> = Dynamic(nil)
     
     var networkManager: RESTCountriesAPINetworkProtocol = RESTCountriesAPINetworkManager(environment: .production)
+    var locationManager = LocationManager()
     
     var reloadCountryListViewClosure: (()->())?
+    var showCurrentCountryClosure: ((String?)->())?
+    var showCountryDetailViewClosure: ((Country)->())?
+}
+
+//MARK:- locationManager related
+extension CountrySearchViewModel {
     
+    func getCurrentLocation() {
+        initLocationManager()
+        locationManager.requestLocation(placemarkNeeded: true)
+    }
+    
+    private func initLocationManager() {
+        guard locationManager.locationUpdateClosure == nil else {
+            return
+        }
+        locationManager.locationUpdateClosure = { [weak self] (location, placemark) in
+            self?.updateLocation(location: location, placemark: placemark)
+        }
+    }
+    
+    private func updateLocation(location: CLLocation?, placemark: CLPlacemark?) {
+        guard let location = location, let placemark = placemark, let countryCode = placemark.isoCountryCode else {
+            return
+        }
+        currLocation = location
+        currCountryCode = countryCode
+        fetchCountries()
+    }
     
 }
 
 //MARK:- searchCountry related
 extension CountrySearchViewModel {
+    
+    func userRequestCurrentCountryDetail() {
+        
+    }
+    
     func fetchCountries() {
+        guard countries.count == 0 else {
+            isLoading.value = false
+            processCountries(countries)
+            return
+        }
         guard isLoading.value == false else {
             return
         }
@@ -59,12 +107,25 @@ extension CountrySearchViewModel {
     }
     
     private func processCountries(_ countries: [Country]){
+        guard let location = currLocation, let countryCode = currCountryCode else {
+            return
+        }
         self.countries = countries
         
         let countryCellViewModels = countries.map { (country) -> CountryCellViewModel in
-            return CountryCellViewModel(with: country)
+            if country.alpha2Code == countryCode {
+                currCountry = country
+            }
+            let cellViewModel = CountryCellViewModel(with: country)
+            if country.latlng.count >= 2 {
+                let countryLoc = CLLocation(latitude: country.latlng[0], longitude: country.latlng[1])
+                cellViewModel.distance = location.distance(from: countryLoc) / 1000
+            } else {
+                cellViewModel.distance = .greatestFiniteMagnitude
+            }
+            return cellViewModel
         }
-        self.countryCellViewModels = countryCellViewModels
+        self.countryCellViewModels = countryCellViewModels.sorted(by: {return $0.distance < $1.distance })
         filterCountries()
     }
     private func filterCountries() {

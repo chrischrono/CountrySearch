@@ -25,18 +25,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qLZ-7o-rSh"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Op-am-WU2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Op-am-WU2">
                                 <rect key="frame" x="0.0" y="100" width="414" height="712"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HZa-oh-uIH"/>
+                                </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qvH-yX-Pg4">
                                 <rect key="frame" x="188.5" y="437.5" width="37" height="37"/>
                                 <color key="color" red="0.36742228269577026" green="0.80455696582794189" blue="0.7215607762336731" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jc-rf-Jxg">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="762" width="414" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-ii-qUE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-ii-qUE">
                                         <rect key="frame" x="20" y="16" width="374" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -77,7 +80,7 @@
                         <constraints>
                             <constraint firstItem="9Op-am-WU2" firstAttribute="bottom" secondItem="nBN-GH-wgL" secondAttribute="top" id="ESE-om-h94"/>
                             <constraint firstItem="qvH-yX-Pg4" firstAttribute="centerY" secondItem="9Op-am-WU2" secondAttribute="centerY" id="WDW-cC-rvW"/>
-                            <constraint firstItem="1Jc-rf-Jxg" firstAttribute="bottom" secondItem="nBN-GH-wgL" secondAttribute="bottom" id="XJP-EP-Mll"/>
+                            <constraint firstItem="1Jc-rf-Jxg" firstAttribute="bottom" secondItem="nBN-GH-wgL" secondAttribute="top" id="XJP-EP-Mll"/>
                             <constraint firstItem="JrN-r4-Eye" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zqg-C1-TGO"/>
                             <constraint firstItem="qvH-yX-Pg4" firstAttribute="centerX" secondItem="9Op-am-WU2" secondAttribute="centerX" id="dlP-6q-anK"/>
                             <constraint firstItem="nBN-GH-wgL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ezb-CR-BqI"/>

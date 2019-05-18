@@ -16,6 +16,7 @@ class CountryCellViewModel {
     let flag: String
     let population: Int
     let area: Double?
+    var distance: Double = 0
     
     init(with country: Country) {
         name = country.name

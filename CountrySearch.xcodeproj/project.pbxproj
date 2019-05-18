@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5AEF2F2290132C0094D869 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AEF2E2290132C0094D869 /* LocationManager.swift */; };
 		FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */; };
 		FAC275A32286FE8B00DC1BFB /* CountrySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */; };
 		FAC275A62286FE8B00DC1BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC275A42286FE8B00DC1BFB /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5AEF2E2290132C0094D869 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FAC2759D2286FE8B00DC1BFB /* CountrySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountrySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC275A02286FE8B00DC1BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC275A22286FE8B00DC1BFB /* CountrySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC275D022870D7400DC1BFB /* Networking */,
+				FA5AEF2E2290132C0094D869 /* LocationManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				FAC275CB22870CBE00DC1BFB /* Language.swift in Sources */,
 				FAC275A12286FE8B00DC1BFB /* AppDelegate.swift in Sources */,
 				FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */,
+				FA5AEF2F2290132C0094D869 /* LocationManager.swift in Sources */,
 				FAC275CC22870CBE00DC1BFB /* RegionalBloc.swift in Sources */,
 				FAC275E022870D7400DC1BFB /* URLParameterEncoding.swift in Sources */,
 				FAC275C52287064500DC1BFB /* CountryViewCell.swift in Sources */,

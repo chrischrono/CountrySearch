@@ -36,6 +36,10 @@ class CountrySearchViewController: UIViewController, UISearchBarDelegate {
         }
     }
     @IBAction func currentCountryButtonDidTapped(sender: UIButton) {
+        countrySearchViewModel.userRequestCurrentCountryDetail()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
 
@@ -53,16 +57,13 @@ extension CountrySearchViewController {
             self?.currentCountryButton.setTitle( String(format: "Current Country: %@", currentCountry ?? ""), for: .normal)
         }
         countrySearchViewModel.isLoading.mainAsyncListener = { [weak self] (isLoading) in
-            if isLoading {
-                self?.loadingView.startAnimating()
-            } else {
-                self?.loadingView.stopAnimating()
-            }
+            self?.showLoadingView(isLoading)
         }
         countrySearchViewModel.status.mainAsyncListener = { [weak self] (status) in
             self?.showStatusView(status)
         }
         
+        countrySearchViewModel.getCurrentLocation()
     }
 }
 
@@ -91,6 +92,15 @@ extension CountrySearchViewController {
         statusViewBottomConstraint.constant = statusView.bounds.height
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    private func showLoadingView(_ isLoading: Bool) {
+        if isLoading {
+            loadingView.startAnimating()
+        } else {
+            loadingView.stopAnimating()
+            refreshControl.endRefreshing()
         }
     }
 }
