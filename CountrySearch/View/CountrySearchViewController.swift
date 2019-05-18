@@ -119,7 +119,7 @@ extension CountrySearchViewController: UITableViewDataSource {
     }
     
     @objc private func handleReshresh(_ refreshControl: UIRefreshControl?) {
-        countrySearchViewModel.fetchCountries()
+        countrySearchViewModel.getCurrentLocation()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
