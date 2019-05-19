@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import Kingfisher
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
@@ -21,11 +22,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet private weak var regionalBlocsLabel: UILabel!
     @IBOutlet private weak var languageLabel: UILabel!
     @IBOutlet private weak var currencyLabel: UILabel!
+    
+    private(set) var todayViewModel = TodayViewModel()
+    
+    private static let flagPlaceholder = UIImage(named: "FlagPlaceholder")
         
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.)
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
+        initViewModel()
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -34,10 +41,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
-        
-        let sharedDefaults = UserDefaults.init(suiteName: "group.CountrySearchSharing")
-        if let countryString = sharedDefaults?.value(forKey: "currentCountry") {
-            print(">>Country: \(countryString)")
+        if todayViewModel.updateCountry() {
             completionHandler(.newData)
         } else {
             completionHandler(.noData)
@@ -53,4 +57,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
+}
+
+//MARK:- private func
+extension TodayViewController {
+    
+    private func initViewModel() {
+        todayViewModel.configureViewClosure = configureView
+    }
+    private func configureView() {
+        
+        flagImageView.kf.setImage(with: URL(string: todayViewModel.flag), placeholder: TodayViewController.flagPlaceholder, options: nil, progressBlock: nil, completionHandler: nil)
+        nameLabel.text = todayViewModel.name
+        populationLabel.text = "👤: \(todayViewModel.population)"
+        capitalLabel.text = todayViewModel.capital
+        regionLabel.text = todayViewModel.region
+        regionalBlocsLabel.text = todayViewModel.regionalBlocs
+        languageLabel.text = todayViewModel.language
+        currencyLabel.text = todayViewModel.currency
+    }
 }

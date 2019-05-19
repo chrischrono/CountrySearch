@@ -31,9 +31,7 @@ class CountrySearchViewController: UIViewController, UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let keyword = (searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-        if keyword.count > 0 {
-            countrySearchViewModel.keyword = keyword
-        }
+        countrySearchViewModel.keyword = keyword
     }
     @IBAction func currentCountryButtonDidTapped(sender: UIButton) {
         countrySearchViewModel.userRequestCurrentCountryDetail()
@@ -79,6 +77,7 @@ extension CountrySearchViewController {
 extension CountrySearchViewController {
     private func initView() {
         initTableView()
+        statusViewBottomConstraint.constant = statusView.bounds.height
         currentCountryButton.layer.cornerRadius = currentCountryButton.bounds.height / 2
     }
     
@@ -87,7 +86,7 @@ extension CountrySearchViewController {
             hideStatusView()
             return
         }
-        statusLabel.text = status
+        statusLabel.text = status.localized()
         statusViewBottomConstraint.constant = 0
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()

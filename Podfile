@@ -13,4 +13,10 @@ target 'CountrySearch' do
     # Pods for testing
   end
 
+  target 'CurrentCountry' do
+    inherit! :search_paths
+    # Pods for CurrentCountry
+  end
+
+
 end

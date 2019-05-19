@@ -31,9 +31,9 @@ class CountryViewCell: UITableViewCell {
     func configureCell(model: CountryCellViewModel) {
         flagImageView.kf.setImage(with: URL(string: model.flag), placeholder: CountryViewCell.flagPlaceholder, options: nil, progressBlock: nil, completionHandler: nil)
         nameLabel.text = model.name
-        populationLabel.text = "👤: \(model.population) - \(floor(model.distance))"
+        populationLabel.text = "👤: \(model.population)"// - \(floor(model.distance))
         if let area = model.area {
-            areaLabel.text = "\(area)"
+            areaLabel.text = "\(area)km²"
         } else {
             areaLabel.text = nil
         }
