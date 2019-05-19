@@ -9,7 +9,7 @@
 import Foundation
 
 
-class RegionalBloc: Codable {
+struct RegionalBloc: Codable {
     var acronym: String
     var name: String
     var otherAcronyms: [String]

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Country: Codable {
+struct Country: Codable {
     var name: String
     var alpha2Code: String
     var alpha3Code: String

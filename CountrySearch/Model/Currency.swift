@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Currency: Codable {
+struct Currency: Codable {
     var code: String?
     var name: String?
     var symbol: String?

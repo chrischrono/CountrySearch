@@ -19,6 +19,7 @@
 		FA4E413222918FC0004D6816 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E413122918FC0004D6816 /* MockNetworkManager.swift */; };
 		FA4E413422918FD0004D6816 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E413322918FD0004D6816 /* MockLocationManager.swift */; };
 		FA4E413622919337004D6816 /* CountrySearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E413522919337004D6816 /* CountrySearchViewModelTests.swift */; };
+		FA4E413822919D13004D6816 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E413722919D13004D6816 /* CurrencyTests.swift */; };
 		FA5AEF2F2290132C0094D869 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AEF2E2290132C0094D869 /* LocationManager.swift */; };
 		FABAE5E622915CD200D260F0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABAE5E522915CD200D260F0 /* NotificationCenter.framework */; };
 		FABAE5E922915CD200D260F0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAE5E822915CD200D260F0 /* TodayViewController.swift */; };
@@ -107,6 +108,7 @@
 		FA4E413122918FC0004D6816 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		FA4E413322918FD0004D6816 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
 		FA4E413522919337004D6816 /* CountrySearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchViewModelTests.swift; sourceTree = "<group>"; };
+		FA4E413722919D13004D6816 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		FA5AEF2E2290132C0094D869 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FABAE5E422915CD200D260F0 /* CurrentCountry.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CurrentCountry.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABAE5E522915CD200D260F0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -329,6 +331,7 @@
 				FAC275B52286FE8C00DC1BFB /* CountrySearchTests.swift */,
 				FAC275B72286FE8C00DC1BFB /* Info.plist */,
 				FA4E413522919337004D6816 /* CountrySearchViewModelTests.swift */,
+				FA4E413722919D13004D6816 /* CurrencyTests.swift */,
 			);
 			path = CountrySearchTests;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 				FA4E412E22918EE4004D6816 /* XCTestCase.swift in Sources */,
 				FA4E413422918FD0004D6816 /* MockLocationManager.swift in Sources */,
 				FA4E413622919337004D6816 /* CountrySearchViewModelTests.swift in Sources */,
+				FA4E413822919D13004D6816 /* CurrencyTests.swift in Sources */,
 				FAC275B62286FE8C00DC1BFB /* CountrySearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Language: Codable {
+struct Language: Codable {
     var name: String
     var iso639_1: String?
     var iso639_2: String?
