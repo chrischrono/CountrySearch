@@ -40,7 +40,12 @@ class CountrySearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "countryDetailSegue" {
+            guard let viewController = segue.destination as? CountryDetailViewController, let country = sender as? Country else {
+                return
+            }
+            viewController.countryDetailViewModel.setCountryDetail(country)
+        }
     }
 
 }
@@ -52,6 +57,9 @@ extension CountrySearchViewController {
             DispatchQueue.main.async {
                 self?.countryTableView.reloadData()
             }
+        }
+        countrySearchViewModel.showCountryDetailViewClosure = { (country) in
+            self.performSegue(withIdentifier: "countryDetailSegue", sender: country)
         }
         countrySearchViewModel.currentCountry.mainAsyncListener = { [weak self] (currentCountry) in
             self?.currentCountryButton.setTitle( String(format: "Current Country: %@", currentCountry ?? ""), for: .normal)
@@ -71,6 +79,7 @@ extension CountrySearchViewController {
 extension CountrySearchViewController {
     private func initView() {
         initTableView()
+        currentCountryButton.layer.cornerRadius = currentCountryButton.bounds.height / 2
     }
     
     private func showStatusView(_ status: String?) {

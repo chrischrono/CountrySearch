@@ -40,7 +40,6 @@ class CountrySearchViewModel {
     var locationManager = LocationManager()
     
     var reloadCountryListViewClosure: (()->())?
-    var showCurrentCountryClosure: ((String?)->())?
     var showCountryDetailViewClosure: ((Country)->())?
 }
 
@@ -76,7 +75,10 @@ extension CountrySearchViewModel {
 extension CountrySearchViewModel {
     
     func userRequestCurrentCountryDetail() {
-        
+        guard let country = currCountry else {
+            return
+        }
+        showCountryDetailViewClosure?(country)
     }
     
     func fetchCountries() {
@@ -127,6 +129,8 @@ extension CountrySearchViewModel {
         }
         self.countryCellViewModels = countryCellViewModels.sorted(by: {return $0.distance < $1.distance })
         filterCountries()
+        
+        shareCurrentCountry()
     }
     private func filterCountries() {
         if let keyword = keyword?.lowercased(), keyword.count > 0 {
@@ -140,6 +144,16 @@ extension CountrySearchViewModel {
         
         if filteredCountryCellViewModels.count == 0 {
             status.value = "country_search_no_result"
+        }
+    }
+    private func shareCurrentCountry() {
+        guard let country = currCountry else {
+            return
+        }
+        
+        if let data = try? JSONEncoder().encode(country) {
+            let sharedDefaults = UserDefaults(suiteName: "group.CountrySearchSharing")
+            sharedDefaults?.setValue(String(data: data, encoding: .utf8 ), forKey: "currentCountry")
         }
     }
 }
