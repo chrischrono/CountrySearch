@@ -42,6 +42,7 @@
 		FAC275E622870D7400DC1BFB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DC22870D7400DC1BFB /* Router.swift */; };
 		FAC275E722870D7400DC1BFB /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */; };
 		FAC275E822870D7400DC1BFB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC275DE22870D7400DC1BFB /* EndPointType.swift */; };
+		FACB926422917C180097E915 /* TodayAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACB926322917C180097E915 /* TodayAssets.xcassets */; };
 		FAE7286E22885D0500465E70 /* CountrySearchVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */; };
 		FAE728702288684D00465E70 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */; };
 		FAE7287322886E9500465E70 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7287222886E9500465E70 /* Dynamic.swift */; };
@@ -125,6 +126,7 @@
 		FAC275DC22870D7400DC1BFB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FAC275DD22870D7400DC1BFB /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		FAC275DE22870D7400DC1BFB /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FACB926322917C180097E915 /* TodayAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TodayAssets.xcassets; sourceTree = "<group>"; };
 		FAE7286D22885D0500465E70 /* CountrySearchVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchVIewModel.swift; sourceTree = "<group>"; };
 		FAE7286F2288684D00465E70 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
 		FAE7287222886E9500465E70 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				FABAE5F522915FAB00D260F0 /* CurrentCountry.entitlements */,
 				FABAE5EA22915CD200D260F0 /* MainInterface.storyboard */,
 				FABAE5ED22915CD200D260F0 /* Info.plist */,
+				FACB926322917C180097E915 /* TodayAssets.xcassets */,
 			);
 			path = CurrentCountry;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACB926422917C180097E915 /* TodayAssets.xcassets in Resources */,
 				FABAE5EC22915CD200D260F0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
