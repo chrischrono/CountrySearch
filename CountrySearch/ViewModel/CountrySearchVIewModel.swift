@@ -37,7 +37,7 @@ class CountrySearchViewModel {
     let status: Dynamic<String?> = Dynamic(nil)
     
     var networkManager: RESTCountriesAPINetworkProtocol = RESTCountriesAPINetworkManager(environment: .production)
-    var locationManager = LocationManager()
+    var locationManager: LocationManagerProtocol = LocationManager()
     
     var reloadCountryListViewClosure: (()->())?
     var showCountryDetailViewClosure: ((Country)->())?

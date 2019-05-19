@@ -10,7 +10,13 @@ import Foundation
 
 import CoreLocation
 
-class LocationManager: NSObject {
+protocol LocationManagerProtocol {
+    var locationUpdateClosure: ((CLLocation?, CLPlacemark?)->())?  { get set }
+    
+    func requestLocation(placemarkNeeded: Bool)
+}
+
+class LocationManager: NSObject, LocationManagerProtocol {
     static private var shared: LocationManager!
     private var locationManager = CLLocationManager()
     var lastLocation: CLLocation?
